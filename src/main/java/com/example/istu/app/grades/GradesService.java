@@ -35,6 +35,9 @@ public class GradesService {
         grade.setGrade(gradeDetails.getGrade());
         return repository.save(grade);
     }
+    public List<Grades> getGradesByUserGradeBook(String gradeBook) {
+        return repository.findByUserGradeBook(gradeBook);
+    }
 
     // Удалить оценку
     public void deleteGrade(long id) {

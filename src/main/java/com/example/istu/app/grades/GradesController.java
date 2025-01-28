@@ -49,4 +49,9 @@ public class GradesController {
         service.deleteGrade(id);
         return ResponseEntity.noContent().build();
     }
+
+    @GetMapping("/user/{gradeBook}")
+    public List<Grades> getGradesByGradeBook(@PathVariable String gradeBook) {
+        return service.getGradesByUserGradeBook(gradeBook);
+    }
 }
