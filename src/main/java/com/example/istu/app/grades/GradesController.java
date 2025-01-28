@@ -51,7 +51,7 @@ public class GradesController {
     }
 
     @GetMapping("/user/{gradeBook}")
-    public List<Grades> getGradesByGradeBook(@PathVariable String gradeBook) {
+    public List<Grades> getGradesByGradeBook(@PathVariable Long gradeBook) {
         return service.getGradesByUserGradeBook(gradeBook);
     }
 }

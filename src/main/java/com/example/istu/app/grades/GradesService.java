@@ -35,7 +35,7 @@ public class GradesService {
         grade.setGrade(gradeDetails.getGrade());
         return repository.save(grade);
     }
-    public List<Grades> getGradesByUserGradeBook(String gradeBook) {
+    public List<Grades> getGradesByUserGradeBook(Long gradeBook) {
         return repository.findByUserGradeBook(gradeBook);
     }
 
