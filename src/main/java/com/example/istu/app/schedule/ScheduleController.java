@@ -44,4 +44,9 @@ public class ScheduleController {
         service.deleteSchedule(id);
         return ResponseEntity.noContent().build();
     }
+
+    @GetMapping("/user/{userId}")
+    public List<Schedule> getSchedulesByUser(@PathVariable long userId) {
+        return service.getSchedulesByUser(userId);
+    }
 }
